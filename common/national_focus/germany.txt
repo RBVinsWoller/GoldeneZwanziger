@@ -1,0 +1,1065 @@
+focus_tree = {
+	id = germany
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	
+	default = no
+	
+	focus = {
+		id = ger_form_goverement
+		icon = GFX_goal_support_democracy
+		cost = 10
+		x = 14
+		y = 0
+		completion_reward = { 
+			add_political_power = 120 
+			add_stability = 0.05 
+		}
+	}	
+	
+	focus = {
+		id = ger_investors
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		x = 3
+		y = 0
+		completion_reward = { 
+			swap_ideas = { 
+			remove_idea = payment_of_reparations 
+			add_idea = payment_of_reparations2 
+			} 
+		} 
+
+	}
+	
+	focus = {
+		id = ger_secret_rearm
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10
+		completion_reward = {
+			swap_ideas = { 
+			remove_idea = army_limit 
+			add_idea = army_limit2
+			} 
+		}
+		x = 25
+		y = 0
+
+	}
+	
+	focus = {
+		id = ger_new_civil_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = ger_investors
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant build = yes
+				}	
+			}
+		}
+		x = 1
+		y = 1
+
+	}
+	
+	focus = {
+		id = ger_new_civil_factories2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = ger_new_civil_factories
+		}
+		completion_reward = {
+			52 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant build = yes
+				}	
+			}
+			
+			add_ideas = bayern_bear
+		}
+		x = 1
+		y = 2
+
+	}
+	
+	focus = {
+		id = ger_reichsbahn
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = ger_investors
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant build = yes
+				}	
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant build = yes
+				}	
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant build = yes
+				}	
+			}
+		}
+		x = 3
+		y = 1
+
+	}
+	
+	focus = {
+		id = ger_new_railroads
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = ger_reichsbahn
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant build = yes
+				}	
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant build = yes
+				}	
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant build = yes
+				}	
+			}
+		}
+		x = 3
+		y = 2
+
+	}
+	
+	focus = {
+		id = ger_secret_military_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = ger_investors
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant build = yes
+				}	
+			}
+		}
+		x = 5
+		y = 1
+
+	}
+	
+	focus = {
+		id = ger_military_factrories
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = ger_secret_military_factory
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant build = yes
+				}	
+			}
+		}
+		x = 5
+		y = 2
+
+	}
+	
+	focus = {
+		id = ger_science
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = ger_new_civil_factories2
+		}
+		prerequisite = {
+			focus = ger_new_railroads
+		}
+		prerequisite = {
+			focus = ger_military_factrories
+		}
+		completion_reward = {
+			add_ideas = weimar_science
+		}
+		x = 1
+		y = 4
+
+	}
+	
+	focus = {
+		id = ger_building
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = ger_military_factrories
+		}
+		prerequisite = {
+			focus = ger_new_railroads
+		}
+		prerequisite = {
+			focus = ger_new_civil_factories2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = construction_tech
+			}
+			
+			add_ideas = ger_trade_union
+		}
+		x = 5
+		y = 4
+
+	}
+	
+	focus = {
+		id = ger_building2
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = ger_building
+		}
+		completion_reward = {
+			add_ideas = east_prussien_building
+		}
+		x = 5
+		y = 5
+
+	}
+	
+	focus = {
+		id = ger_amnesty
+		icon = GFX_goal_generic_cavalry
+		cost = 5
+		prerequisite = {
+			focus = ger_form_goverement
+		}
+		x = 14
+		y = 1
+		completion_reward = { 
+			add_political_power = 50 
+		} 
+
+	}
+	
+	focus = {
+		id = ger_locarno_accept
+		icon = GFX_goal_tripartite_pact
+		cost = 5
+		prerequisite = {
+			focus = ger_amnesty
+		}
+		mutually_exclusive = {
+			focus = ger_locarno_deny
+		}
+		x = 11
+		y = 2
+		completion_reward = { 
+			country_event = { id = wr.1 }
+		
+			add_opinion_modifier = {
+				target = FRA
+				modifier = locarno_accepted
+			}
+			
+			add_opinion_modifier = {
+				target = ENG
+				modifier = locarno_accepted
+			}
+			
+			add_opinion_modifier = {
+				target = POL
+				modifier = locarno_accepted
+			}
+			
+			add_opinion_modifier = {
+				target = BEL
+				modifier = locarno_accepted
+			}
+			
+			add_opinion_modifier = {
+				target = CZE
+				modifier = locarno_accepted
+			}
+			
+			add_opinion_modifier = {
+				target = ITA
+				modifier = locarno_accepted
+			}
+		}
+
+	}
+	
+	focus = {
+		id = ger_enter_army
+		icon = GFX_goal_support_democracy
+		cost = 4
+		prerequisite = {
+			focus = ger_locarno_accept
+		}
+		mutually_exclusive = {
+			focus = ger_noninterference
+		}
+		x = 8
+		y = 3
+
+	}
+	
+	focus = {
+		id = ger_noninterference
+		icon = GFX_goal_generic_consumer_goods
+		cost = 4
+		prerequisite = {
+			focus = ger_locarno_accept
+		}
+		mutually_exclusive = {
+			focus = ger_enter_army
+		}
+		x = 11
+		y = 3
+
+	}
+	
+	focus = {
+		id = ger_gov_crisis
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = ger_noninterference
+		}
+		x = 11
+		y = 4
+
+	}
+	
+	focus = {
+		id = ger_locarno_deny
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5
+		prerequisite = {
+			focus = ger_amnesty
+		}
+		mutually_exclusive = {
+			focus = ger_locarno_accept
+		}
+		x = 17
+		y = 2
+		completion_reward = { 
+			country_event = { id = wr.2 }
+		
+			add_opinion_modifier = {
+				target = FRA
+				modifier = locarno_denied
+			}
+			
+			add_opinion_modifier = {
+				target = ENG
+				modifier = locarno_denied
+			}
+			
+			add_opinion_modifier = {
+				target = POL
+				modifier = locarno_denied
+			}
+			
+			add_opinion_modifier = {
+				target = BEL
+				modifier = locarno_denied
+			}
+			
+			add_opinion_modifier = {
+				target = CZE
+				modifier = locarno_denied
+			}
+			
+			add_opinion_modifier = {
+				target = ITA
+				modifier = locarno_denied
+			}
+		}
+
+	}
+	
+	focus = {
+		id = ger_support_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 4
+		prerequisite = {
+			focus = ger_locarno_deny
+		}
+		mutually_exclusive = {
+			focus = ger_support_left
+		}
+		x = 14
+		y = 3
+
+	}
+	
+	focus = {
+		id = ger_return_lands
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = ger_support_neutrality
+		}
+		x = 14
+		y = 4
+
+	}
+	
+	focus = {
+		id = ger_support_left
+		icon = GFX_goal_generic_defence
+		cost = 4
+		prerequisite = {
+			focus = ger_locarno_deny
+		}
+		mutually_exclusive = {
+			focus = ger_support_neutrality
+		}
+		x = 17
+		y = 3
+
+	}
+	
+	focus = {
+		id = ger_confiscation_proj
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		prerequisite = {
+			focus = ger_support_left
+		}
+		x = 17
+		y = 4
+
+	}
+	
+	focus = {
+		id = ger_schwarze_reichswehr
+		icon = GFX_goal_rhineland
+		cost = 10
+		prerequisite = {
+			focus = ger_secret_rearm
+		}
+		x = 25
+		y = 1
+
+	}
+	
+	focus = {
+		id = ger_officers_training
+		icon = GFX_goal_generic_build_tank
+		cost = 10
+		prerequisite = {
+			focus = ger_schwarze_reichswehr
+		}
+		x = 22
+		y = 2
+
+	}
+	
+	focus = {
+		id = ger_new_mot
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		prerequisite = {
+			focus = ger_officers_training
+		}
+		x = 22
+		y = 5
+
+	}
+	
+	focus = {
+		id = ger_new_wharfs
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		prerequisite = {
+			focus = ger_schwarze_reichswehr
+		}
+		x = 25
+		y = 2
+
+	}
+	
+	focus = {
+		id = ger_destroyer_tech
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		prerequisite = {
+			focus = ger_new_wharfs
+		}
+		mutually_exclusive = {
+			focus = ger_submarine_tech
+		}
+		x = 24
+		y = 3
+
+	}
+	
+	focus = {
+		id = ger_submarine_tech
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10
+		prerequisite = {
+			focus = ger_new_wharfs
+		}
+		mutually_exclusive = {
+			focus = ger_destroyer_tech
+		}
+		x = 26
+		y = 3
+
+	}
+	
+	focus = {
+		id = ger_cruisers_tech
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10
+		prerequisite = {
+			focus = ger_submarine_tech
+			focus = ger_destroyer_tech
+		}
+		x = 25
+		y = 4
+
+	}
+	
+	focus = {
+		id = ger_instituties
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = ger_science
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		x = 1
+		y = 5
+
+	}
+	
+	focus = {
+		id = ger_science2
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		prerequisite = {
+			focus = ger_instituties
+		}
+		prerequisite = {
+			focus = ger_building2
+		}
+		completion_reward = {
+			swap_ideas = { 
+			remove_idea = weimar_science
+			add_idea = weimar_science2
+			} 
+		}
+		x = 3
+		y = 5
+
+	}
+	
+	focus = {
+		id = ger_synt_oil
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10
+		prerequisite = {
+			focus = ger_science2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			bonus = 0.75
+			uses = 2
+			category = synth_resources
+			}
+		}
+		x = 3
+		y = 6
+
+	}
+	
+	focus = {
+		id = ger_secret_recruiting
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = ger_schwarze_reichswehr
+		}
+		x = 28
+		y = 2
+
+	}
+	
+	focus = {
+		id = ger_new_equip
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = ger_secret_recruiting
+		}
+		x = 28
+		y = 5
+
+	}
+	
+	focus = {
+		id = ger_bonus_doctrine
+		icon = GFX_goal_generic_army_artillery
+		cost = 10
+		prerequisite = {
+			focus = ger_new_equip
+		}
+		prerequisite = {
+			focus = ger_new_mot
+		}
+		x = 25
+		y = 6
+
+	}
+	
+	focus = {
+		id = ger_mobile_doc
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		prerequisite = {
+			focus = ger_bonus_doctrine
+		}
+		mutually_exclusive = {
+			focus = ger_superior_doc
+		}
+		x = 24
+		y = 7
+
+	}
+	
+	focus = {
+		id = ger_superior_doc
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10
+		prerequisite = {
+			focus = ger_bonus_doctrine
+		}
+		mutually_exclusive = {
+			focus = ger_mobile_doc
+		}
+		x = 26
+		y = 7
+
+	}
+	
+#ветка монархии
+
+	focus = {
+		id = ger_nnnp_guards
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = ger_return_lands
+		}
+		x = 14
+		y = 5
+
+	}
+	
+	focus = {
+		id = ger_invite_mackensen
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = ger_nnnp_guards
+		}
+		x = 14
+		y = 6
+
+	}
+	
+	focus = {
+		id = ger_invite_nnnp_in_gov
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = ger_invite_mackensen
+		}
+		x = 14
+		y = 7
+
+	}
+	
+	focus = {
+		id = ger_mackensen_revolution
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = ger_invite_nnnp_in_gov
+		}
+		x = 14
+		y = 8
+
+	}
+	
+	focus = {
+		id = ger_restoration_empire
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		prerequisite = {
+			focus = ger_mackensen_revolution
+		}
+		x = 14
+		y = 9
+
+	}
+	
+	focus = {
+		id = ger_kaiser_wilhelm
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = ger_restoration_empire
+		}
+		mutually_exclusive = {
+			focus = ger_kaiser_adolf
+			focus = ger_kaiser_ernst
+		}
+		x = 14
+		y = 10
+
+	}
+	
+	focus = {
+		id = ger_former_greatness
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = ger_kaiser_wilhelm
+		}
+		x = 14
+		y = 11
+
+	}
+	
+	focus = {
+		id = ger_empire_army
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = ger_former_greatness
+		}
+		x = 14
+		y = 12
+
+	}
+	
+	focus = {
+		id = ger_kaiser_adolf
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = ger_restoration_empire
+		}
+		mutually_exclusive = {
+			focus = ger_kaiser_wilhelm
+			focus = ger_kaiser_ernst
+		}
+		x = 12
+		y = 10
+
+	}
+	
+	focus = {
+		id = ger_nazi_monarchy
+		icon = GFX_goal_support_fascism
+		cost = 10
+		prerequisite = {
+			focus = ger_kaiser_adolf
+		}
+		x = 9
+		y = 11
+
+	}
+	
+	focus = {
+		id = ger_ss_in_army
+		icon = GFX_goal_rhineland
+		cost = 10
+		prerequisite = {
+			focus = ger_nazi_monarchy
+		}
+		x = 9
+		y = 12
+
+	}
+	
+	focus = {
+		id = ger_kaiser_ernst
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = ger_restoration_empire
+		}
+		mutually_exclusive = {
+			focus = ger_kaiser_wilhelm
+			focus = ger_kaiser_adolf
+		}
+		x = 16
+		y = 10
+
+	}
+	
+	focus = {
+		id = ger_communist_monarchy
+		icon = GFX_goal_support_fourth_int
+		cost = 10
+		prerequisite = {
+			focus = ger_kaiser_ernst
+		}
+		x = 19
+		y = 11
+
+	}
+	
+	focus = {
+		id = ger_rotfront_in_army
+		icon = GFX_goal_rhineland
+		cost = 10
+		prerequisite = {
+			focus = ger_communist_monarchy
+		}
+		x = 19
+		y = 12
+
+	}
+	
+	focus = {
+		id = ger_remove_versailles
+		icon = GFX_goal_anschluss
+		cost = 10
+		prerequisite = {
+			focus = ger_empire_army
+			focus = ger_ss_in_army
+			focus = ger_rotfront_in_army
+		}
+		x = 14
+		y = 13
+
+	}
+	
+	focus = {
+		id = ger_anticapitalism
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10
+		prerequisite = {
+			focus = ger_rotfront_in_army
+		}
+		prerequisite = {
+			focus = ger_remove_versailles
+		}
+		x = 19
+		y = 14
+
+	}
+	
+	focus = {
+		id = ger_colonial_country
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = ger_remove_versailles
+		}
+		prerequisite = {
+			focus = ger_empire_army
+		}
+		x = 14
+		y = 14
+
+	}
+	
+	focus = {
+		id = ger_primacy_in_europe
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = ger_ss_in_army
+		}
+		prerequisite = {
+			focus = ger_remove_versailles
+		}
+		x = 9
+		y = 14
+
+	}
+	
+	focus = {
+		id = ger_old_generals
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = ger_colonial_country
+		}
+		x = 14
+		y = 15
+
+	}
+	
+	focus = {
+		id = ger_nazi_generals
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = ger_primacy_in_europe
+		}
+		x = 9
+		y = 15
+
+	}
+	
+	focus = {
+		id = ger_communist_generals
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = ger_anticapitalism
+		}
+		x = 19
+		y = 15
+
+	}
+	
+	
+#претензии
+
+	focus = {
+		id = ger_saarland
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		x = 34
+		y = 0
+
+	}
+
+	focus = {
+		id = ger_alsace_lorraine
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = ger_saarland
+		}
+		x = 32
+		y = 1
+
+	}
+	
+	focus = {
+		id = ger_german_afrika
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = ger_alsace_lorraine
+		}
+		x = 32
+		y = 2
+
+	}
+	
+	focus = {
+		id = ger_memel
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = ger_saarland
+		}
+		x = 36
+		y = 1
+
+	}
+	
+	focus = {
+		id = ger_west_prussia
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = ger_memel
+		}
+		x = 36
+		y = 2
+
+	}
+	
+	focus = {
+		id = ger_upper_silesia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = ger_west_prussia
+		}
+		x = 36
+		y = 3
+
+	}
+	
+	focus = {
+		id = ger_schleswig
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = ger_upper_silesia
+		}
+		x = 36
+		y = 4
+
+	}
+	
+}	

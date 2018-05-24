@@ -1,0 +1,114 @@
+ideas = {
+	country = {
+	
+		industrialisation_of_nord = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_generic_industrial_cocern
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = +0.20
+				production_speed_arms_factory_factor = +0.20
+				production_speed_infrastructure_factor = +0.2
+				line_change_production_efficiency_factor = +0.30
+			}
+			
+		}
+		democracy1 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = democratic_group
+			
+			modifier = {
+				democratic_drift = 0.1
+			}
+			
+		}
+		fascism1 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = fascism_group
+			
+			modifier = {
+				fascism_drift = 0.1
+			}
+			
+		}	
+		communism1 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = communism_group
+			
+			modifier = {
+				communism_drift = 1
+			}
+			
+		}		
+		decay_left_block = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_goal_anti_comintern_pact
+			
+			modifier = {
+				communism_drift = -0.7
+				democratic_drift = 0.4
+				fascism_drift = 0.3
+			}
+			
+		}	
+		communism_from_france = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = goal_generic_support_communism
+			
+			modifier = {
+				communism_drift = 1
+			}
+			
+		}		
+	}
+}

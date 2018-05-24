@@ -1,0 +1,5 @@
+GER	= "countries/Weimar Republic.txt"
+SAA = "countries/Saar.txt"
+ITA = "countries/Italy.txt"
+DAZ = "countries/Danzig.txt"
+FRA = "countries/France.txt"

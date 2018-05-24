@@ -1,0 +1,110 @@
+﻿division_template = {
+	name = "Allgemeine Division"
+
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Kavallerie-Division"
+
+	division_names_group = GER_Cav_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+###армии###
+
+units = {
+
+division = {	
+		name = "1. Allgemeine Division" 
+		location = 6332
+		division_template = "Allgemeine Division" 
+		start_experience_factor = 0.3
+	}
+	
+division = {	
+		name = "2. Allgemeine Division" 
+		location = 6282
+		division_template = "Allgemeine Division" 
+		start_experience_factor = 0.3
+	}	
+
+division = {	
+		name = "3. Allgemeine Division" 
+		location = 6521
+		division_template = "Allgemeine Division" 
+		start_experience_factor = 0.3
+	}
+	
+division = {	
+		name = "4. Allgemeine Division" 
+		location = 514
+		division_template = "Allgemeine Division" 
+		start_experience_factor = 0.3
+	}
+
+division = {	
+		name = "5. Allgemeine Division" 
+		location = 9517
+		division_template = "Allgemeine Division" 
+		start_experience_factor = 0.3
+	}
+
+division = {	
+		name = "6. Allgemeine Division" 
+		location = 266
+		division_template = "Allgemeine Division" 
+		start_experience_factor = 0.3
+	}
+
+division = {	
+		name = "7. Allgemeine Division" 
+		location = 3705
+		division_template = "Allgemeine Division" 
+		start_experience_factor = 0.3
+	}
+
+division = {	
+		name = "1. Kavallerie-Division" 
+		location = 9456
+		division_template = "Kavallerie-Division" 
+		start_experience_factor = 0.3
+	}
+
+division = {	
+		name = "2. Kavallerie-Division" 
+		location = 9570
+		division_template = "Kavallerie-Division" 
+		start_experience_factor = 0.3
+	}
+
+division = {	
+		name = "3. Kavallerie-Division" 
+		location = 482
+		division_template = "Kavallerie-Division" 
+		start_experience_factor = 0.3
+	}
+}
+	
